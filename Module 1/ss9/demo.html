@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg"
+style="width: 500px; position: relative; left: 0px" id="img">
+<button onclick="moveImg()">Click me</button>
+</body>
+<script>
+    function moveImg() {
+        console.log(document.getElementById("img").style.left)
+        document.getElementById("img").style.left = parseInt(document.getElementById("img").style.left) + 10+"px";
+    }
+</script>
+</html>
