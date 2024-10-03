@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            text-align: center;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            color: blue;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #dad6d6;
+        }
+    </style>
+</head>
+<body>
+<input id="temp" style="width: 400px; height: 50px; font-size: 20px">
+<table border="1" width="400px" height="400px">
+    <tr>
+        <td><button onclick="inputChange(1)">1</button></td>
+        <td><button onclick="inputChange(2)">2</button></td>
+        <td><button onclick="inputChange(3)">3</button></td>
+        <td><button onclick="inputChange('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="inputChange(4)">4</button></td>
+        <td><button onclick="inputChange(5)">5</button></td>
+        <td><button onclick="inputChange(6)">6</button></td>
+        <td><button onclick="inputChange('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="inputChange(7)">7</button></td>
+        <td><button onclick="inputChange(8)">8</button></td>
+        <td><button onclick="inputChange(9)">9</button></td>
+        <td><button onclick="inputChange('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="clearInput()">C</button></td>
+        <td><button onclick="inputChange(0)">0</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        <td><button onclick="inputChange('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    function inputChange(num) {
+        document.getElementById("temp").value += num
+    }
+
+    function calculate() {
+        let result = eval(document.getElementById("temp").value)
+        document.getElementById("temp").value = result
+    }
+</script>
+</body>
+</html>

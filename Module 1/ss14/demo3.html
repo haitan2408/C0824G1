@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["SS24 ultra", "Iphone 16", "Xiaomi 14"];
+
+    let arr2 = [["ss24 ultra", 20000000, 2024], ["iphone 16", 40000000, 2024]];
+
+    let result = "<table border='1' width='400px'>"
+    result += "<tr>"
+    result += "<th>Tên sản phẩm</th>"
+    result += "<th>Giá sản phẩm</th>"
+    result += "<th>Năm sản xuất sản phẩm</th>"
+    result += "</tr>"
+    for (let i = 0; i < arr2.length; i++) {
+        result += "<tr>"
+        for (let j = 0; j < arr[2].length; j++) {
+            result += `<td>${arr2[i][j]}</td>`
+        }
+        result += "</tr>"
+    }
+    result += "</table>"
+    document.write(result)
+</script>
+</body>
+</html>

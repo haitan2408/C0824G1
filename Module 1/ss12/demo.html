@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime() {
+        let num = +prompt("Nhập số cần kiểm tra")
+        if (isPrimeCustom(num)) {
+            alert(n + " là số nguyên tố");
+        } else {
+            alert(n + " không phải là số nguyên tố")
+        }
+    }
+
+    function countPrimeInArr() {
+        let count = 0
+        for(let temp of arr) {
+            if(isPrimeCustom(temp)) {
+                count++
+            }
+        }
+    }
+
+    function display30Prime() {
+        let num = 2;
+        let count = 0;
+        while (count < 30) {
+            if(isPrimeCustom(num)) {
+                alert(num)
+                count++
+            }
+            num++;
+        }
+    }
+
+    function isPrimeCustom(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % 2 === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+//     Kiểm tra 1 mảng có bao nhiêu số nguyên tố
+
+</script>
+</body>
+</html>
